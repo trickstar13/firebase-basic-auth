@@ -1,7 +1,6 @@
 const functions = require("firebase-functions");
 const express = require("express");
 const basicAuth = require("basic-auth-connect");
-const path = require("path");
 const app = express();
 
 app.all(
@@ -11,9 +10,8 @@ app.all(
   })
 );
 
-const staticFilesPath = path.join(process.cwd(), "static");
-console.log("Serving static files from:", staticFilesPath);
+console.log(__dirname + "/static/");
 
-app.use(express.static(staticFilesPath));
+app.use(express.static(__dirname + "/static/"));
 
 exports.app = functions.https.onRequest(app);
