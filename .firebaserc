@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "basic-auth-production-17fb1"
-  }
+    "default": "basic-auth-production-17fb1",
+    "development": "basic-auth-development-bfe7f"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
