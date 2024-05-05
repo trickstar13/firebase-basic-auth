@@ -1,0 +1,19 @@
+name: Deploy to Firebase Hosting (Develop)
+
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  build_and_preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm i
+      - run: npm run build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BASIC_AUTH_DEVELOPMENT_BFE7F }}
+          projectId: basic-auth-development-bfe7f
+          channelId: live
