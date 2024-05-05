@@ -30,10 +30,10 @@ jobs:
           projectId: basic-auth-development-bfe7f
           channelId: live
 
-      - name: Deploy to Firebase
+      - name: Deploy to Firebase Functions
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only functions
         env:
           GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BASIC_AUTH_DEVELOPMENT_BFE7F }}
-          projectId: basic-auth-development-bfe7f
+          PROJECT_ID: basic-auth-development-bfe7f
