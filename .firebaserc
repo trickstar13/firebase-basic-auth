@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "basic-auth-production-17fb1",
+    "default": "basic-auth-development-bfe7f",
     "development": "basic-auth-development-bfe7f"
   },
   "targets": {},
