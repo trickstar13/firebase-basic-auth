@@ -35,5 +35,5 @@ jobs:
         with:
           args: deploy --only functions
         env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BASIC_AUTH_DEVELOPMENT_BFE7F }}
           projectId: basic-auth-development-bfe7f
