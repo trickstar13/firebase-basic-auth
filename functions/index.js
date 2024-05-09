@@ -10,8 +10,6 @@ app.all(
   })
 );
 
-console.log(__dirname + "/static/");
-
 app.use(express.static(__dirname + "/static/"));
 
 exports.app = functions.https.onRequest(app);

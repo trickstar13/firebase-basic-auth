@@ -20,7 +20,6 @@ jobs:
       - name: Build Astro
         run: npm run build
       - run: mv dist/* functions/static/
-      - run: ls -la functions/static/
 
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
